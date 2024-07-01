@@ -739,19 +739,6 @@ runs:
                   - secops+tlsobs@mozilla.com
                   - cloud-ops@mozilla.com
 
-    # Tracking protection paging
-    - targets:
-        - shavar.services.mozilla.com
-      assertions:
-        - certificate:
-            validity:
-                notafter: ">14d"
-      cron: "0 18 * * *"
-      notifications:
-          email:
-              recipients:
-                  - b64:c2hhdmFyQG1vei1zdmMtb3BzLnBhZ2VyZHV0eS5jb20K
-
     # Cloud Services product delivery, must remain on the old config for XPSP2
     - targets:
         - download-sha1.allizom.org
